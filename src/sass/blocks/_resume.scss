@@ -1,0 +1,57 @@
+.resume {
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 425px 425px;
+        padding-left: 115px;
+        column-gap: 135px;
+    }
+    &__list {
+        list-style-type: none;
+    }
+    &__column-title {
+        margin-bottom: 45px;
+        @include before_circle;
+        &::before {
+            width: 15px;
+            height: 15px;
+            top: 9px;
+            left: -49px;
+        }
+    }
+    &__column {
+        text-align: left;
+        position: relative;
+    }
+    &__item {
+        margin-bottom: 45px;
+        position: relative;
+        &::after {
+            content: "";
+            width: 42px;
+            height: 1px;
+            background-color: #000;
+            z-index: 2;
+            position: absolute;
+            left: -42px;
+            top: 18px;
+        }
+        &::before {
+            content: "";
+            width: 1px;
+            height: 172px;
+            background-color: #000;
+            z-index: 2;
+            position: absolute;
+            left: -42px;
+            top: -51px;
+        }
+    }
+    &__item-location {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 12px;
+    }
+
+}

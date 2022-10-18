@@ -1,0 +1,63 @@
+.card {
+    padding-left: 50px;
+    &__descr {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        &_resume {
+            transform: translateX(-50px);
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        @include before_circle;
+        &::before {
+            top: 0;
+            left: -50px;
+        }
+        &::after {
+            content: "";
+            width: 25px;
+            height: 24px;
+            position: absolute;
+            left: -35px;
+            top:15px;
+        }
+        &_web {
+            &::after {
+                background: url('../../icons/about_me/web_development.svg') no-repeat;
+            }
+        }
+        &_mobile {
+            &::after {
+                background: url('../../icons/about_me/mobile_dev.svg') no-repeat;
+            }
+        }
+        &_design {
+            &::after {
+                background: url('../../icons/about_me/design.svg') no-repeat;
+            }
+        }
+        &_university {
+            &::after {
+                background: url('../../icons/experience/university.svg') no-repeat;
+            }
+        }
+        &_front-end {
+            &::after {
+                background: url('../../icons/experience/developer.svg') no-repeat;
+            }
+        }
+        &_courses {
+            &::after {
+                background: url('../../icons/experience/courses.svg') no-repeat;
+            }
+        }
+        &_designer {
+            &::after {
+                background: url('../../icons/experience/designer.svg') no-repeat;
+            }
+        }
+    }
+}
