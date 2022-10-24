@@ -3,7 +3,7 @@
     &__list {
         margin-top: 128px;
         display: grid;
-        grid-template: repeat(2, 70px) / repeat(3, 350px);
+        grid-template: repeat(2,70px)/repeat(3,1fr);
         column-gap: 45px;
         row-gap: 30px;
     }

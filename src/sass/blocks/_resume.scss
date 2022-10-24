@@ -26,6 +26,28 @@
     &__item {
         margin-bottom: 45px;
         position: relative;
+        &:first-child {
+            &::after {
+                content: "";
+                width: 42px;
+                height: 1px;
+                background-color: #000;
+                z-index: 2;
+                position: absolute;
+                left: -42px;
+                top: 18px;
+            }
+            &::before {
+                content: "";
+                width: 1px;
+                height: 100%;
+                background-color: #000;
+                z-index: 2;
+                position: absolute;
+                left: -42px;
+                top: -51px;
+            }
+        }
         &::after {
             content: "";
             width: 42px;
@@ -39,15 +61,28 @@
         &::before {
             content: "";
             width: 1px;
-            height: 172px;
+            height: calc(100% + 92px);
             background-color: #000;
             z-index: 2;
             position: absolute;
             left: -42px;
-            top: -51px;
+            top: -96px;
+        }
+    }
+    &__card {
+        padding-left: 0;
+    }
+    .card__title {
+        padding-left: 56px;
+        &::before {
+            left: 0;
+        }
+        &::after {
+            left: 15px;
         }
     }
     &__item-location {
+        padding-left: 56px;
         font-weight: 500;
         font-size: 12px;
         line-height: 18px;
